@@ -38,6 +38,23 @@
 }
 ```
 
+## Usage
+
+```go
+package main
+
+import (
+    log "github.com/sirupsen/logrus"
+    "github.com/xissy/logrus"
+)
+
+func main() {
+    log.SetOutput(os.Stdout)
+    log.SetFormatter(&logrus.ApexUpJSONFormatter{})
+    log.WithField("key", "value").Info("message here")
+}
+```
+
 ## References
 
 * https://github.com/sirupsen/logrus
