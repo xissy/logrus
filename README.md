@@ -26,11 +26,11 @@
   "fields":{
     "grpc.code":"OK",
     "grpc.method":"Auth",
-    "grpc.service":"pb.taeho.auth.AuthService",
-    "grpc.start_time":"2018-03-30T10:55:34-07:00",
-    "grpc.time_ms":0.25,
-    "peer.address":"127.0.0.1:61161",
-    "span.kind":"server",
+    "grpc_service":"pb.taeho.auth.AuthService",
+    "grpc_start_time":"2018-03-30T10:55:34-07:00",
+    "grpc_time_ms":0.25,
+    "peer_address":"127.0.0.1:61161",
+    "span_kind":"server",
     "system":"grpc"
   },
   "level":"info",

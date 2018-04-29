@@ -3,6 +3,7 @@ package logrus
 import (
 	"encoding/json"
 	"fmt"
+	"strings"
 	"time"
 
 	"github.com/sirupsen/logrus"
@@ -72,6 +73,7 @@ func (f *ApexUpJSONFormatter) Format(entry *logrus.Entry) ([]byte, error) {
 	data := make(Fields, len(entry.Data)+3)
 	data["fields"] = make(map[string]interface{})
 	for k, v := range entry.Data {
+		k = strings.Replace(k, ".", "_", -1)
 		switch v := v.(type) {
 		case error:
 			// Otherwise errors are ignored by `encoding/json`
