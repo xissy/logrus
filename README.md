@@ -24,8 +24,8 @@
 ```json
 {
   "fields":{
-    "grpc.code":"OK",
-    "grpc.method":"Auth",
+    "grpc_code":"OK",
+    "grpc_method":"Auth",
     "grpc_service":"pb.taeho.auth.AuthService",
     "grpc_start_time":"2018-03-30T10:55:34-07:00",
     "grpc_time_ms":0.25,
