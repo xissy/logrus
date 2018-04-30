@@ -3,7 +3,6 @@ package logrus
 import (
 	"encoding/json"
 	"errors"
-	"fmt"
 	"strings"
 	"testing"
 
@@ -141,7 +140,7 @@ func TestFieldClashWithRemappedFields(t *testing.T) {
 			t.Errorf("Expected field %v to be untouched; got %v", field, entry[field])
 		}
 
-		remappedKey := fmt.Sprintf("%s", field)
+		remappedKey := field
 		if remapped, ok := entry[remappedKey]; ok {
 			t.Errorf("Expected %s to be empty; got %v", remappedKey, remapped)
 		}
@@ -152,7 +151,7 @@ func TestFieldClashWithRemappedFields(t *testing.T) {
 			t.Errorf("Expected field %v to be mapped to an Entry value", field)
 		}
 
-		remappedKey := fmt.Sprintf("%s", field)
+		remappedKey := field
 		if remapped, ok := entry["fields"].(map[string]interface{})[remappedKey]; ok {
 			if remapped != field {
 				t.Errorf("Expected field %v to be copied to %s; got %v", field, remappedKey, remapped)
